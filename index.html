@@ -244,6 +244,34 @@
 .ccx-dots button{width:9px;height:9px;border-radius:50%;border:0;background:var(--line,rgba(255,255,255,.3));cursor:pointer;padding:0}
 .ccx-dots button.on{background:var(--teal,#36c9b0);width:22px;border-radius:5px}
 @media(max-width:700px){.ccx-open{display:none}}</style>
+<style id="ccx-style">
+#ccx-dashboards{padding:46px 0 10px;margin:8px 0 0}
+#ccx-dashboards .ccx-wrap,#ccx-recs .ccx-wrap{max-width:1080px;margin:0 auto}
+.ccx-kick{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--teal,#36c9b0)}
+.ccx-h{font-family:var(--font,inherit);font-size:30px;font-weight:700;color:var(--ink,#fff);margin:8px 0 6px}
+.ccx-sub{color:var(--muted,#9aa6b2);font-size:16px;margin-bottom:22px;max-width:700px}
+.ccx-carousel{position:relative;border-radius:var(--radius,14px);overflow:hidden;border:1px solid var(--line,rgba(255,255,255,.14));box-shadow:var(--shadow,0 22px 60px rgba(0,0,0,.45));background:#0A2540}
+.ccx-track{display:flex;transition:transform 1.1s cubic-bezier(.6,.02,.2,1)}
+.ccx-slide{position:relative;flex:0 0 100%;display:block;overflow:hidden;background:#0A2540}
+.ccx-frame{position:absolute;inset:0;overflow:hidden}.ccx-frame iframe{border:0;transform-origin:top left;pointer-events:none}
+.ccx-ph{position:absolute;inset:0;display:grid;place-items:center;color:var(--gold,#caa64a);font-size:18px}
+.ccx-cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:38px 22px 16px;background:linear-gradient(transparent,rgba(4,12,20,.55) 40%,rgba(4,12,20,.94));display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.ccx-cap b{display:block;font-size:18px;color:#fff}.ccx-cap span{font-size:13px;color:var(--gold,#e7cf8e)}
+.ccx-open{flex:0 0 auto;font-size:13px;font-weight:700;color:#05231d;background:var(--teal,#36c9b0);padding:9px 15px;border-radius:999px;white-space:nowrap}
+.ccx-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:4;width:40px;height:40px;border-radius:50%;border:1px solid var(--line,rgba(255,255,255,.3));background:rgba(4,12,20,.6);color:#fff;font-size:21px;cursor:pointer}
+.ccx-nav.prev{left:12px}.ccx-nav.next{right:12px}
+.ccx-dots{display:flex;gap:8px;justify-content:center;margin-top:16px}
+.ccx-dots button{width:9px;height:9px;border-radius:50%;border:0;background:var(--line,rgba(255,255,255,.3));cursor:pointer;padding:0}
+.ccx-dots button.on{background:var(--teal,#36c9b0);width:22px;border-radius:5px}
+#ccx-recs{padding:14px 0 44px}
+.ccx-recgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.ccx-rec{background:var(--surface,#11151c);border:1px solid var(--line,rgba(255,255,255,.12));border-radius:var(--radius,14px);padding:20px;display:flex;flex-direction:column}
+.ccx-rec .qm{font-size:38px;line-height:.5;color:var(--gold,#caa64a);margin-bottom:10px}
+.ccx-rec p{color:var(--ink,#dfe6ee);font-size:14px;flex:1;line-height:1.5}
+.ccx-rec cite{display:block;margin-top:14px;font-style:normal;border-top:1px solid var(--line,rgba(255,255,255,.12));padding-top:10px}
+.ccx-rec cite b{display:block;color:var(--ink,#fff);font-size:13.5px}.ccx-rec cite span{color:var(--muted,#9aa6b2);font-size:12px}
+@media(max-width:860px){.ccx-recgrid{grid-template-columns:1fr}}
+@media(max-width:700px){.ccx-open{display:none}}</style>
 </head>
 <body>
 
@@ -275,6 +303,20 @@
 
   <!-- ================= OVERVIEW ================= -->
   <div class="panel active" id="overview">
+
+<div id="ccx-dashboards"><div class="ccx-wrap">
+<div class="ccx-kick">Live Program Dashboards</div><div class="ccx-h">See the work, not just the words</div>
+<div class="ccx-sub">Fully interactive control towers I built and ran. Each tile is live — click to open the real dashboard.</div>
+<div class="ccx-carousel" id="ccxCar"><div class="ccx-track" id="ccxTrack">
+<a class="ccx-slide" href="./ppm.html" target="_blank" rel="noopener"><div class="ccx-frame"><div class="ccx-ph">Loading live dashboard…</div><iframe data-src="./ppm.html" title="PPM Control Tower" scrolling="no"></iframe></div><div class="ccx-cap"><div><b>PPM Control Tower</b><span>Spend, burn, EVM, sprints, KPIs, SteerCo</span></div><span class="ccx-open">Open live →</span></div></a>
+<a class="ccx-slide" href="./spyglass.html" target="_blank" rel="noopener"><div class="ccx-frame"><div class="ccx-ph">Loading live dashboard…</div><iframe data-src="./spyglass.html" title="Supply Chain Control Tower" scrolling="no"></iframe></div><div class="ccx-cap"><div><b>Supply Chain Control Tower</b><span>Spyglass · operations, OTIF 360, scenarios</span></div><span class="ccx-open">Open live →</span></div></a>
+<a class="ccx-slide" href="./inventory-sync.html" target="_blank" rel="noopener"><div class="ccx-frame"><div class="ccx-ph">Loading live dashboard…</div><iframe data-src="./inventory-sync.html" title="Inventory Sync" scrolling="no"></iframe></div><div class="ccx-cap"><div><b>Inventory Sync · WMS ↔ ERP</b><span>Plant-floor inventory synchronization</span></div><span class="ccx-open">Open live →</span></div></a>
+</div><button class="ccx-nav prev" id="ccxPrev">‹</button><button class="ccx-nav next" id="ccxNext">›</button></div>
+<div class="ccx-dots" id="ccxDots"></div></div></div>
+
+<div id="ccx-recs"><div class="ccx-wrap">
+<div class="ccx-kick">Recommendations</div><div class="ccx-h">In their words</div>
+<div class="ccx-recgrid"><blockquote class="ccx-rec"><div class="qm">“</div><p>I worked alongside Chris at Byrne Dairy. He pairs deep technical mastery with genuine business judgment, and he is exceptionally professional and honest about what is real, the risks, and what it will take. Together we shipped successful AI implementations on our Oracle estate that moved real operational and financial numbers, driven from idea to production with discipline and care.</p><cite><b>Pedro Amador Gates</b><span>Colleague, Byrne Dairy</span></cite></blockquote><blockquote class="ccx-rec"><div class="qm">“</div><p>Chris is an excellent technology leader who has a unique passion for success in everything he does. He takes a long-term approach that drives success in the organizations he works with, and he has been a great partner and team leader.</p><cite><b>Thomas Chartrand</b><span>CFO, Byrne Dairy</span></cite></blockquote><blockquote class="ccx-rec"><div class="qm">“</div><p>An exceptional strategist who never loses sight of the large goals. A super-tough negotiator who will get the best deal and the best contractual terms. I would recommend Chris's leadership to any company that needs to modernize their technology.</p><cite><b>Magdalena Krol</b><span>ERP Implementation Consultant</span></cite></blockquote><blockquote class="ccx-rec"><div class="qm">“</div><p>There is a huge difference between being an expert in technology and knowing how to use technology to deliver real-world impact. Chris is hands-down the best technology expert I've ever worked with.</p><cite><b>Michael Cooper</b><span>Communications & Brand Leader</span></cite></blockquote><blockquote class="ccx-rec"><div class="qm">“</div><p>Chris is an amazing CIO and an inspirational team leader. He knew how to make senior management see IT as not a cost center but an enhancement to everyone's workflows.</p><cite><b>Colleen Alaimo</b><span>IT Director</span></cite></blockquote><blockquote class="ccx-rec"><div class="qm">“</div><p>He solved nagging problems we had struggled with for years and built short and long-term technology roadmaps. If your organization requires great business insight and technology leadership, I highly recommend Chris.</p><cite><b>Ken Yancey</b><span>CEO, SCORE</span></cite></blockquote></div></div></div>
 
 <div id="ccx-dashboards"><div class="ccx-wrap">
 <div class="ccx-kick">Live Program Dashboards</div>
@@ -819,6 +861,22 @@ function scaleFrames(){var w=car.clientWidth;sc=w/1440;h=Math.round(w*0.60);slid
 function load(idx){var f=slides[idx].querySelector('iframe');if(f&&!f.src&&f.getAttribute('data-src')){f.src=f.getAttribute('data-src');f.addEventListener('load',function(){var p=slides[idx].querySelector('.ccx-ph');if(p)p.style.display='none';var fh=fullH(slides[idx]);if(fh){f.setAttribute('data-fh',fh);f.style.height=fh+'px';}if(idx===i)pan(i);});}}
 function pan(idx){slides.forEach(function(s,k){if(k!==idx){var g=s.querySelector('iframe');g.style.transition='none';g.style.transform='scale('+sc+') translateY(0px)';}});var f=slides[idx].querySelector('iframe');var fh=parseInt(f.getAttribute('data-fh')||'0',10);f.style.transition='none';f.style.transform='scale('+sc+') translateY(0px)';if(!fh)return;var maxS=Math.min(fh*sc-h,h*1.25);if(maxS<24)return;var tU=Math.round(maxS/sc);requestAnimationFrame(function(){requestAnimationFrame(function(){f.style.transition='transform '+PAN+'ms linear';f.style.transform='scale('+sc+') translateY(-'+tU+'px)';});});}
 function go(n){i=(n+N)%N;track.style.transform='translateX(-'+(i*100)+'%)';dotEls.forEach(function(d,k){d.classList.toggle('on',k===i);});load(i);load((i+1)%N);pan(i);}
+function reset(){clearInterval(timer);timer=setInterval(function(){go(i+1);},DWELL);}
+document.getElementById('ccxNext').addEventListener('click',function(){go(i+1);reset();});
+document.getElementById('ccxPrev').addEventListener('click',function(){go(i-1);reset();});
+car.addEventListener('mouseenter',function(){clearInterval(timer);});car.addEventListener('mouseleave',reset);
+window.addEventListener('resize',scaleFrames);scaleFrames();load(0);setTimeout(function(){load(1);load(2);},1600);reset();
+})();</script>
+<script>(function(){
+var track=document.getElementById('ccxTrack'); if(!track) return;
+var slides=[].slice.call(track.children),N=slides.length;var dots=document.getElementById('ccxDots'),car=document.getElementById('ccxCar');
+var i=0,timer,sc=1,h=0,DWELL=13000;
+slides.forEach(function(s,idx){var b=document.createElement('button'); if(idx===0)b.className='on'; b.addEventListener('click',function(){go(idx);reset();}); dots.appendChild(b);});
+var dotEls=[].slice.call(dots.children);
+function sizeOne(s){var f=s.querySelector('iframe');f.style.width='1440px';f.style.height=Math.round(h/sc)+'px';f.style.transformOrigin='top left';f.style.transform='scale('+sc+')';}
+function scaleFrames(){var w=car.clientWidth;sc=w/1440;h=Math.round(w*0.60);slides.forEach(function(s){s.style.height=h+'px';sizeOne(s);});}
+function load(idx){var f=slides[idx].querySelector('iframe');if(f&&!f.src&&f.getAttribute('data-src')){f.src=f.getAttribute('data-src');f.addEventListener('load',function(){var p=slides[idx].querySelector('.ccx-ph');if(p)p.style.display='none';});}}
+function go(n){i=(n+N)%N;track.style.transform='translateX(-'+(i*100)+'%)';dotEls.forEach(function(d,k){d.classList.toggle('on',k===i);});load(i);load((i+1)%N);}
 function reset(){clearInterval(timer);timer=setInterval(function(){go(i+1);},DWELL);}
 document.getElementById('ccxNext').addEventListener('click',function(){go(i+1);reset();});
 document.getElementById('ccxPrev').addEventListener('click',function(){go(i-1);reset();});
