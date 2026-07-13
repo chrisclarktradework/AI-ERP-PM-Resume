@@ -46,6 +46,14 @@ a{color:inherit;text-decoration:none}
 .fit{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:16px 18px}
 .fit .need{font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--gold)}
 .fit p{font-size:14px;color:var(--slate);margin-top:5px}
+.map-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.mp{background:#fff;border:1px solid var(--line);border-radius:11px;padding:14px 15px 13px;display:flex;flex-direction:column;gap:7px;box-shadow:var(--sh)}
+.mp .ic{width:32px;height:32px;border-radius:9px;background:var(--mist);display:grid;place-items:center;color:var(--gold);border:1px solid var(--line)}
+.mp .ic svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.mp b{font-size:13px;color:var(--ink);line-height:1.22}
+.mp em{font-style:normal;font-size:12px;color:var(--muted);line-height:1.35}
+@media(max-width:760px){.map-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.map-grid{grid-template-columns:1fr}}
 /* EXPERIENCE */
 .xp{padding:26px 44px 4px}
 .job{padding:14px 0;border-bottom:1px solid var(--line)}
@@ -128,17 +136,30 @@ a{color:inherit;text-decoration:none}
     <div class="stat"><div class="n">&gt;97%</div><div class="l">Program budget accuracy on earned value</div></div>
   </div>
 
-  <div class="sec">
+  <div class="sec" id="mapped">
     <div class="kick">Mapped to the role</div>
     <h2>How I meet what JR10423955 asks for</h2>
     <div class="rule"></div>
-    <div class="fit-grid">
-      <div class="fit reveal"><div class="need">PoC through optimization</div><p>Founded and ran a multi-year enterprise AI program on a completed Oracle Fusion estate; ten coordinated agents reached production on Oracle AI Agent Studio, every claim measured against source.</p></div>
-      <div class="fit reveal"><div class="need">North American AI portfolio</div><p>Coordinated and tracked portfolios of 80+ concurrent initiatives across multiple tracks, with earned-value reporting and stage-gate status the leadership team could act on.</p></div>
-      <div class="fit reveal"><div class="need">AI governance &amp; operating model</div><p>Chaired steering and technology-investment forums; built the AI operating model, governance, guardrails, and AI-augmented evaluation that let production AI hold up.</p></div>
-      <div class="fit reveal"><div class="need">SAFe / Scrum &amp; stage gates (LBIP-style)</div><p>Delivered complex programs on stage-gate governance and earned value with 100+ person multi-vendor teams. PMP, PgMP, PRINCE2 credentialed.</p></div>
-      <div class="fit reveal"><div class="need">End-to-end AI / ML implementation</div><p>Hands-on across agents, retrieval, prompts, pipelines, evaluations, and guardrails, integrated into the systems a business already runs rather than a demo.</p></div>
-      <div class="fit reveal"><div class="need">High-tech manufacturing &amp; EU/US coordination</div><p>Program leadership at a $1B manufacturer across supply chain and operations, coordinating vendors and stakeholders across regions and time zones.</p></div>
+    <div class="map-grid">
+      <div class="mp reveal"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg></div><b>PoC through optimization</b><em>10 coordinated agents taken to production</em></div>
+      <div class="mp reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></div><b>North American AI portfolio</b><em>80+ initiatives tracked on earned value</em></div>
+      <div class="mp reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 5-3 7-7 9-4-2-7-4-7-9V6l7-3z"/></svg></div><b>AI governance &amp; operating model</b><em>Steering forums, guardrails, evaluation</em></div>
+      <div class="mp reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M20 7L10 17l-5-5"/></svg></div><b>SAFe / Scrum &amp; stage gates</b><em>PMP · PgMP · PRINCE2 · 100+ vendor team</em></div>
+      <div class="mp reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></svg></div><b>End-to-end AI / ML</b><em>Agents, RAG, pipelines, evaluations, guardrails</em></div>
+      <div class="mp reveal"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></div><b>High-tech mfg · EU/US</b><em>$1B manufacturer, multi-region delivery</em></div>
+    </div>
+  </div>
+
+  <div id="work">
+    <div class="kick">Selected work · Live &amp; interactive</div>
+    <h2>See the work</h2>
+    <div class="rule"></div>
+    <p class="lead">Anonymized, fully interactive control towers I built and ran on a live enterprise estate. Each preview is the real dashboard, scaled down.</p>
+    <div class="dash-grid">
+      <div class="dcard reveal"><a class="thumb" href="ppm.html" target="_blank" rel="noopener"><div class="ph">Loading preview…</div><iframe data-src="ppm.html" title="Program &amp; Portfolio Control Tower" scrolling="no" loading="lazy"></iframe></a><div class="bd"><h3>Program &amp; Portfolio Control Tower</h3><p>Spend, burn, earned value, sprints, KPIs, RAID, and stage-gate status in one view — exactly the portfolio governance this role runs.</p><a class="cta" href="ppm.html" target="_blank" rel="noopener">Open the live dashboard →</a></div></div>
+      <div class="dcard reveal"><a class="thumb" href="spyglass.html" target="_blank" rel="noopener"><div class="ph">Loading preview…</div><iframe data-src="spyglass.html" title="Spyglass Operations Tower" scrolling="no" loading="lazy"></iframe></a><div class="bd"><h3>Spyglass · AI Operations Tower</h3><p>Twelve-tab operations tower driven by the production AI agents I shipped: flows, disruptions, and scenario modeling on live data.</p><a class="cta" href="spyglass.html" target="_blank" rel="noopener">Open the live dashboard →</a></div></div>
+      <div class="dcard reveal"><a class="thumb" href="inventory-sync.html" target="_blank" rel="noopener"><div class="ph">Loading preview…</div><iframe data-src="inventory-sync.html" title="Integration Sync" scrolling="no" loading="lazy"></iframe></a><div class="bd"><h3>Integration Sync · WMS ↔ ERP</h3><p>System-to-system synchronization and exception handling — the end-to-end integration an AI initiative has to land on.</p><a class="cta" href="inventory-sync.html" target="_blank" rel="noopener">Open the live dashboard →</a></div></div>
+      <div class="dcard reveal"><a class="thumb" href="exec-daily.html" target="_blank" rel="noopener"><div class="ph">Loading preview…</div><iframe data-src="exec-daily.html" title="Executive Daily Brief" scrolling="no" loading="lazy"></iframe></a><div class="bd"><h3>Executive Daily Brief</h3><p>Projects, markets, schedule, and a full issue and resolution tracker — the leadership operating rhythm a program reports into.</p><a class="cta" href="exec-daily.html" target="_blank" rel="noopener">Open the live dashboard →</a></div></div>
     </div>
   </div>
 
@@ -172,19 +193,6 @@ a{color:inherit;text-decoration:none}
       <div class="sk"><div class="lab">Program &amp; Portfolio</div><div class="tags"><span>SAFe</span><span>Scrum</span><span>Stage-gate governance</span><span>Earned Value Management</span><span>Jira</span><span>Smartsheet</span></div></div>
       <div class="sk"><div class="lab">Delivery &amp; Integration</div><div class="tags"><span>Oracle Integration Cloud</span><span>SAP Process Orchestration</span><span>REST · IDoc · RFC</span><span>Snowflake · Databricks</span></div></div>
       <div class="sk"><div class="lab">Credentials</div><div class="tags"><span>PMP</span><span>PgMP</span><span>PRINCE2</span><span>CISSP</span><span>Oracle AI Agent Studio (Assoc.)</span></div></div>
-    </div>
-  </div>
-
-  <div id="work">
-    <div class="kick">Selected work · Live &amp; interactive</div>
-    <h2>See the work</h2>
-    <div class="rule"></div>
-    <p class="lead">Anonymized, fully interactive control towers I built and ran on a live enterprise estate. Each preview is the real dashboard, scaled down — the program and portfolio tooling I would bring to an AI project at Airbus.</p>
-    <div class="dash-grid">
-      <div class="dcard reveal"><a class="thumb" href="ppm.html" target="_blank" rel="noopener"><div class="ph">Loading preview…</div><iframe data-src="ppm.html" title="Program &amp; Portfolio Control Tower" scrolling="no" loading="lazy"></iframe></a><div class="bd"><h3>Program &amp; Portfolio Control Tower</h3><p>Spend, burn, earned value, sprints, KPIs, RAID, and stage-gate status in one view — exactly the portfolio governance this role runs.</p><a class="cta" href="ppm.html" target="_blank" rel="noopener">Open the live dashboard →</a></div></div>
-      <div class="dcard reveal"><a class="thumb" href="spyglass.html" target="_blank" rel="noopener"><div class="ph">Loading preview…</div><iframe data-src="spyglass.html" title="Spyglass Operations Tower" scrolling="no" loading="lazy"></iframe></a><div class="bd"><h3>Spyglass · AI Operations Tower</h3><p>Twelve-tab operations tower driven by the production AI agents I shipped: flows, disruptions, and scenario modeling on live data.</p><a class="cta" href="spyglass.html" target="_blank" rel="noopener">Open the live dashboard →</a></div></div>
-      <div class="dcard reveal"><a class="thumb" href="inventory-sync.html" target="_blank" rel="noopener"><div class="ph">Loading preview…</div><iframe data-src="inventory-sync.html" title="Integration Sync" scrolling="no" loading="lazy"></iframe></a><div class="bd"><h3>Integration Sync · WMS ↔ ERP</h3><p>System-to-system synchronization and exception handling — the end-to-end integration an AI initiative has to land on.</p><a class="cta" href="inventory-sync.html" target="_blank" rel="noopener">Open the live dashboard →</a></div></div>
-      <div class="dcard reveal"><a class="thumb" href="exec-daily.html" target="_blank" rel="noopener"><div class="ph">Loading preview…</div><iframe data-src="exec-daily.html" title="Executive Daily Brief" scrolling="no" loading="lazy"></iframe></a><div class="bd"><h3>Executive Daily Brief</h3><p>Projects, markets, schedule, and a full issue and resolution tracker — the leadership operating rhythm a program reports into.</p><a class="cta" href="exec-daily.html" target="_blank" rel="noopener">Open the live dashboard →</a></div></div>
     </div>
   </div>
 
