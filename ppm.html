@@ -6,23 +6,23 @@
 <style>
 :root {
   /* match Spyglass V2.1 aesthetic */
-  --bg-deep: #2D2015;
-  --bg-panel: #3A2210;
-  --bg-surface: #4A2C17;
-  --bg-surface-lt: #5A3A24;
-  --bg-card: #3F2511;
-  --border: #7B5B3A;
-  --border-lt: #6B5944;
+  --bg-deep: #1E2124;
+  --bg-panel: #3A2F10;
+  --bg-surface: #2D3034;
+  --bg-surface-lt: #3A3E44;
+  --bg-card: #3F3311;
+  --border: #535962;
+  --border-lt: #50565E;
   --border-soft: rgba(212,168,83,0.18);
   --text: #F2E8D4;
-  --text-muted: #C4B59A;
-  --text-dim: #8A7856;
+  --text-muted: #A9AEB5;
+  --text-dim: #676F79;
   --accent-gold: #D4A853;
   --accent-gold-bright: #F4C870;
-  --accent-cream: #FAF5EC;
+  --accent-cream: #FAF6EC;
   --status-good: #8FB98B;
   --status-good-strong: #3E7142;
-  --status-warn: #E38B55;
+  --status-warn: #DCBA5C;
   --status-warn-strong: #B8860B;
   --status-bad: #B33A1B;
   --status-bad-bright: #D94A2B;
@@ -32,9 +32,9 @@
   --data-3: #B33A1B;
   --data-4: #50808E;
   --data-5: #A26769;
-  --data-6: #E38B55;
+  --data-6: #DCBA5C;
   --data-7: #6B8E4E;
-  --data-8: #8C6E54;
+  --data-8: #676F79;
   --data-9: #B8860B;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -201,7 +201,7 @@ table.data th {
 }
 table.data td {
   padding: 10px 10px;
-  border-bottom: 1px solid rgba(123,91,58,0.25);
+  border-bottom: 1px solid rgba(83,89,98,0.25);
   color: var(--text);
 }
 table.data tr:hover td { background: rgba(212,168,83,0.05); }
@@ -224,7 +224,7 @@ table.data tr:last-child td { border-bottom: none; }
 .chip.green { background: rgba(62,113,66,0.25); color: var(--status-good); border: 1px solid var(--status-good-strong); }
 .chip.amber { background: rgba(184,134,11,0.20); color: var(--status-warn); border: 1px solid var(--status-warn-strong); }
 .chip.red { background: rgba(179,58,27,0.22); color: var(--status-bad-bright); border: 1px solid var(--status-bad); }
-.chip.muted { background: rgba(138,120,86,0.15); color: var(--text-dim); border: 1px solid var(--text-dim); }
+.chip.muted { background: rgba(103,111,121,0.15); color: var(--text-dim); border: 1px solid var(--text-dim); }
 .chip.info { background: rgba(80,128,142,0.20); color: var(--info); border: 1px solid var(--info); }
 
 /* Bars */
@@ -259,7 +259,7 @@ table.data tr:last-child td { border-bottom: none; }
 .sprint-card .sc-stats span b { color: var(--accent-cream); font-family: Georgia, serif; font-size: 12px; }
 
 /* RAID */
-.raid-row { display: grid; grid-template-columns: 50px 50px 1fr 130px 100px 100px 100px; gap: 12px; padding: 10px 12px; border-bottom: 1px solid rgba(123,91,58,0.25); align-items: center; }
+.raid-row { display: grid; grid-template-columns: 50px 50px 1fr 130px 100px 100px 100px; gap: 12px; padding: 10px 12px; border-bottom: 1px solid rgba(83,89,98,0.25); align-items: center; }
 .raid-row.head { color: var(--text-dim); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; border-bottom: 1px solid var(--border-lt); }
 .raid-row .id-tag { font-family: Georgia, serif; font-size: 12px; letter-spacing: 0.05em; color: var(--accent-gold); }
 .raid-row .desc { font-size: 12px; line-height: 1.4; color: var(--text); }
@@ -269,7 +269,7 @@ table.data tr:last-child td { border-bottom: none; }
 .action-row {
   display: grid; grid-template-columns: 50px 1fr 140px 110px 90px 90px;
   gap: 12px; padding: 10px 12px;
-  border-bottom: 1px solid rgba(123,91,58,0.25);
+  border-bottom: 1px solid rgba(83,89,98,0.25);
   align-items: center;
 }
 .action-row.head { color: var(--text-dim); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; border-bottom: 1px solid var(--border-lt); }
@@ -371,6 +371,8 @@ details.drill .body { padding: 0 14px 14px 14px; font-size: 12px; color: var(--t
 .mb-12 { margin-bottom: 12px; }
 .mb-16 { margin-bottom: 16px; }
 </style>
+
+<style id="cio-theme">:root{--bg-deep:#0A2540;--bg-panel:#0E2C49;--bg-surface:#123A5C;--bg-surface-lt:#17436A;--border:rgba(231,207,142,.16);--border-lt:rgba(231,207,142,.26);--text:#F4F7FA;--text-muted:#C7D3DF;--text-dim:#9FB1C2;--accent-gold:#A9832C;--accent-gold-bright:#C8A24B;--accent-cream:#E7CF8E;}</style>
 </head>
 <body>
 
@@ -511,7 +513,7 @@ details.drill .body { padding: 0 14px 14px 14px; font-size: 12px; color: var(--t
       <div class="sub">RAID excerpt &middot; sorted by exposure <span class="src smartsheet">SMARTSHEET</span></div>
       <details class="drill" open>
         <summary><span><span class="chip red">R-014</span> &nbsp; WS4 hypertuning blocked by demand history depth</span></summary>
-        <div class="body">3 item families fall below the 18 month minimum. Mitigation: temporary classical baseline. Owner: Pedro AG. Due: 2026-05-08.</div>
+        <div class="body">3 item families fall below the 18 month minimum. Mitigation: temporary classical baseline. Owner: L. Navarro. Due: 2026-05-08.</div>
       </details>
       <details class="drill">
         <summary><span><span class="chip red">R-021</span> &nbsp; WS6 dashboard activation contingent on WS7 stabilization</span></summary>
@@ -519,15 +521,15 @@ details.drill .body { padding: 0 14px 14px 14px; font-size: 12px; color: var(--t
       </details>
       <details class="drill">
         <summary><span><span class="chip amber">R-017</span> &nbsp; WS8 adoption metric coverage incomplete</span></summary>
-        <div class="body">Persona based adoption baseline missing for Plant Floor and Finance Close. Champion network expansion in progress. Owner: Brianna.</div>
+        <div class="body">Persona based adoption baseline missing for Plant Floor and Finance Close. Champion network expansion in progress. Owner: Elena.</div>
       </details>
       <details class="drill">
         <summary><span><span class="chip amber">R-019</span> &nbsp; Vendor SOW V3 amendment not yet signed</span></summary>
-        <div class="body">SI T&amp;M to fixed fee conversion for Phase 3 awaiting CFO signature. Owner: Tom Chartrand.</div>
+        <div class="body">SI T&amp;M to fixed fee conversion for Phase 3 awaiting CFO signature. Owner: Dana Whitfield.</div>
       </details>
       <details class="drill">
         <summary><span><span class="chip amber">R-022</span> &nbsp; Agent token spend trending +18% vs forecast</span></summary>
-        <div class="body">WS1 production agents exceeding modeled token budget. Triage: prompt compression and caching review. Owner: Sasi.</div>
+        <div class="body">WS1 production agents exceeding modeled token budget. Triage: prompt compression and caching review. Owner: Anika.</div>
       </details>
     </div>
 
@@ -1109,7 +1111,7 @@ details.drill .body { padding: 0 14px 14px 14px; font-size: 12px; color: var(--t
           <div class="sub">For next SteerCo &middot; May 8</div>
           <details class="drill" open>
             <summary><span><span class="chip red">D-007</span> &nbsp; Approve WS4 mitigation: classical baseline for 3 item families</span></summary>
-            <div class="body">Recommendation: approve. Allows WS4 to keep momentum while demand history depth catches up. Owner: Pedro AG. Resource: 2 sprints.</div>
+            <div class="body">Recommendation: approve. Allows WS4 to keep momentum while demand history depth catches up. Owner: L. Navarro. Resource: 2 sprints.</div>
           </details>
           <details class="drill">
             <summary><span><span class="chip amber">D-008</span> &nbsp; Endorse WS8 adoption playbook V2</span></summary>
@@ -1138,7 +1140,7 @@ details.drill .body { padding: 0 14px 14px 14px; font-size: 12px; color: var(--t
           <div class="id-tag">R-014</div>
           <div class="desc">WS4 hypertuning blocked by demand history depth (3 item families &lt; 18 mo)
             <small>Mitigation: classical baseline for 3 families, hypertune at SG5</small></div>
-          <div>Pedro AG</div>
+          <div>L. Navarro</div>
           <div><span class="chip red">High</span></div>
           <div><span class="chip red">High</span></div>
           <div><span class="chip amber">Mitigating</span></div>
@@ -1157,7 +1159,7 @@ details.drill .body { padding: 0 14px 14px 14px; font-size: 12px; color: var(--t
           <div><span class="chip amber">RISK</span></div>
           <div class="id-tag">R-017</div>
           <div class="desc">WS8 persona based adoption baseline incomplete for Plant Floor and Finance Close</div>
-          <div>Brianna</div>
+          <div>Elena</div>
           <div><span class="chip amber">Med</span></div>
           <div><span class="chip amber">Med</span></div>
           <div><span class="chip amber">In flight</span></div>
@@ -1167,7 +1169,7 @@ details.drill .body { padding: 0 14px 14px 14px; font-size: 12px; color: var(--t
           <div class="id-tag">R-019</div>
           <div class="desc">Vendor SOW V3 amendment unsigned. Remaining Phase 3 T&amp;M exposure $480K
             <small>CFO signature requested 2026-04-25</small></div>
-          <div>Tom Chartrand</div>
+          <div>Dana Whitfield</div>
           <div><span class="chip amber">Med</span></div>
           <div><span class="chip green">Low</span></div>
           <div><span class="chip amber">Pending</span></div>
@@ -1177,7 +1179,7 @@ details.drill .body { padding: 0 14px 14px 14px; font-size: 12px; color: var(--t
           <div class="id-tag">R-022</div>
           <div class="desc">WS1 agent token spend +18% vs forecast
             <small>Triage: prompt compression, response caching</small></div>
-          <div>Sasi</div>
+          <div>Anika</div>
           <div><span class="chip amber">Med</span></div>
           <div><span class="chip amber">Med</span></div>
           <div><span class="chip amber">In flight</span></div>
@@ -1187,7 +1189,7 @@ details.drill .body { padding: 0 14px 14px 14px; font-size: 12px; color: var(--t
           <div class="id-tag">I-008</div>
           <div class="desc">UAT environment data refresh failed twice in past two weeks
             <small>Root cause: OIC orchestration timeout. Permanent fix in PR-244</small></div>
-          <div>Sasi</div>
+          <div>Anika</div>
           <div><span class="chip amber">Med</span></div>
           <div>n/a</div>
           <div><span class="chip amber">In progress</span></div>
@@ -1197,7 +1199,7 @@ details.drill .body { padding: 0 14px 14px 14px; font-size: 12px; color: var(--t
           <div class="id-tag">I-011</div>
           <div class="desc">WS2 master data discrepancy between WMS and Fusion for 142 SKUs
             <small>Reconciliation script run, manual review by SCM team underway</small></div>
-          <div>Pedro AG</div>
+          <div>L. Navarro</div>
           <div><span class="chip amber">Med</span></div>
           <div>n/a</div>
           <div><span class="chip amber">In progress</span></div>
@@ -1216,7 +1218,7 @@ details.drill .body { padding: 0 14px 14px 14px; font-size: 12px; color: var(--t
           <div><span class="chip muted">ASSUMP</span></div>
           <div class="id-tag">A-009</div>
           <div class="desc">Champion network capacity sufficient for Phase 4 sustain mode</div>
-          <div>Brianna</div>
+          <div>Elena</div>
           <div><span class="chip green">Low</span></div>
           <div><span class="chip green">Low</span></div>
           <div><span class="chip green">Holding</span></div>
@@ -1234,7 +1236,7 @@ details.drill .body { padding: 0 14px 14px 14px; font-size: 12px; color: var(--t
           <div><span class="chip info">DEP</span></div>
           <div class="id-tag">D-006</div>
           <div class="desc">WS5 Financial Close depends on WS2 master data cleanup completion</div>
-          <div>Brianna</div>
+          <div>Elena</div>
           <div><span class="chip green">Low</span></div>
           <div>n/a</div>
           <div><span class="chip green">On track</span></div>
@@ -1243,7 +1245,7 @@ details.drill .body { padding: 0 14px 14px 14px; font-size: 12px; color: var(--t
           <div><span class="chip info">DEP</span></div>
           <div class="id-tag">D-007</div>
           <div class="desc">WS8 training content depends on Redwood feature catalog finalization (WS7)</div>
-          <div>Brianna</div>
+          <div>Elena</div>
           <div><span class="chip green">Low</span></div>
           <div>n/a</div>
           <div><span class="chip green">On track</span></div>
@@ -1262,7 +1264,7 @@ details.drill .body { padding: 0 14px 14px 14px; font-size: 12px; color: var(--t
           <div class="week-card">
             <div class="wc-head">
               <div class="wc-date">2026-04-24 &middot; SteerCo #25</div>
-              <div class="wc-attendees">Chartrand · Wood · Amador-Gates · Brianna · Sasi · CClark</div>
+              <div class="wc-attendees">Whitfield · Harmon · Navarro · Elena · Anika · CClark</div>
             </div>
             <div class="wc-section">
               <h4>Headline</h4>
@@ -1287,7 +1289,7 @@ details.drill .body { padding: 0 14px 14px 14px; font-size: 12px; color: var(--t
             <details class="drill mt-12">
               <summary>Full minutes (45 min session)</summary>
               <div class="body">
-                Chartrand opened with confirmation that the Spyglass program continues to track within the BAFO capped budget. CFO underwriting of the WS4 classical baseline mitigation was secured before the session. Wood reiterated the Phase 4 sustain mode commitment from Operations. Amador-Gates raised the master data discrepancy on 142 SKUs (I-011), with reconciliation script complete and manual review owned by SCM. Brianna walked through the persona based adoption gap for Plant Floor and Finance Close, with champion network expansion proposed as the path. Sasi presented the agent token spend trend with a triage path (prompt compression, response caching) targeted for closure within two sprints. Decisions D-007 (WS4 mitigation), D-008 (WS8 playbook V2) and D-009 (SI SOW V3) routed for next session.
+                Whitfield opened with confirmation that the Spyglass program continues to track within the BAFO capped budget. CFO underwriting of the WS4 classical baseline mitigation was secured before the session. Harmon reiterated the Phase 4 sustain mode commitment from Operations. Navarro raised the master data discrepancy on 142 SKUs (I-011), with reconciliation script complete and manual review owned by SCM. Elena walked through the persona based adoption gap for Plant Floor and Finance Close, with champion network expansion proposed as the path. Anika presented the agent token spend trend with a triage path (prompt compression, response caching) targeted for closure within two sprints. Decisions D-007 (WS4 mitigation), D-008 (WS8 playbook V2) and D-009 (SI SOW V3) routed for next session.
               </div>
             </details>
           </div>
@@ -1295,7 +1297,7 @@ details.drill .body { padding: 0 14px 14px 14px; font-size: 12px; color: var(--t
           <div class="week-card">
             <div class="wc-head">
               <div class="wc-date">2026-04-10 &middot; SteerCo #24</div>
-              <div class="wc-attendees">Chartrand · Wood · Amador-Gates · Brianna · CClark · SI Lead</div>
+              <div class="wc-attendees">Whitfield · Harmon · Navarro · Elena · CClark · SI Lead</div>
             </div>
             <div class="wc-section">
               <h4>Headline</h4>
@@ -1311,7 +1313,7 @@ details.drill .body { padding: 0 14px 14px 14px; font-size: 12px; color: var(--t
             <details class="drill mt-12">
               <summary>Full minutes (52 min session)</summary>
               <div class="body">
-                SI Lead briefed on capacity for the remainder of Phase 3. WS7 stabilization owners confirmed two consecutive clean weeks of incident free operation. Brianna reported persona based adoption baseline at 71% with a path to 85% by SG4. Chartrand asked for a hard cap on agent infrastructure spend separate from the SI budget. Action recorded for CClark to bring back a token cost forecast at the next session.
+                SI Lead briefed on capacity for the remainder of Phase 3. WS7 stabilization owners confirmed two consecutive clean weeks of incident free operation. Elena reported persona based adoption baseline at 71% with a path to 85% by SG4. Whitfield asked for a hard cap on agent infrastructure spend separate from the SI budget. Action recorded for CClark to bring back a token cost forecast at the next session.
               </div>
             </details>
           </div>
@@ -1319,7 +1321,7 @@ details.drill .body { padding: 0 14px 14px 14px; font-size: 12px; color: var(--t
           <div class="week-card">
             <div class="wc-head">
               <div class="wc-date">2026-03-27 &middot; SteerCo #23</div>
-              <div class="wc-attendees">Chartrand · Wood · Amador-Gates · Brianna · Sasi · CClark</div>
+              <div class="wc-attendees">Whitfield · Harmon · Navarro · Elena · Anika · CClark</div>
             </div>
             <div class="wc-section">
               <h4>Headline</h4>
@@ -1329,13 +1331,13 @@ details.drill .body { padding: 0 14px 14px 14px; font-size: 12px; color: var(--t
               <h4>Decisions Made</h4>
               <ul>
                 <li>Phase 2 closed at SG3 on time. SG3 retrospective scheduled.</li>
-                <li>WS4 mitigation triage routed to Pedro AG for proposal at SteerCo #24.</li>
+                <li>WS4 mitigation triage routed to L. Navarro for proposal at SteerCo #24.</li>
               </ul>
             </div>
             <details class="drill mt-12">
               <summary>Full minutes (48 min session)</summary>
               <div class="body">
-                Chartrand commended the team on a clean SG3 close out. Wood stressed that WS4 deficiencies must not create a cascade into WS6 timing. Sasi briefed on OIC orchestration stability post Phase 2 cutover. The session ended with a unanimous SG3 sign off.
+                Whitfield commended the team on a clean SG3 close out. Harmon stressed that WS4 deficiencies must not create a cascade into WS6 timing. Anika briefed on OIC orchestration stability post Phase 2 cutover. The session ended with a unanimous SG3 sign off.
               </div>
             </details>
           </div>
@@ -1362,17 +1364,17 @@ details.drill .body { padding: 0 14px 14px 14px; font-size: 12px; color: var(--t
         <div class="action-row">
           <div class="id-tag">A-102</div>
           <div>Run WS4 demand signal audit refresh against latest 6 weeks of data</div>
-          <div>Pedro AG</div><div>SteerCo #25</div><div>2026-05-15</div><div><span class="chip amber">In progress</span></div>
+          <div>L. Navarro</div><div>SteerCo #25</div><div>2026-05-15</div><div><span class="chip amber">In progress</span></div>
         </div>
         <div class="action-row">
           <div class="id-tag">A-103</div>
           <div>Champion network expansion playbook for Plant Floor and Finance Close</div>
-          <div>Brianna</div><div>SteerCo #25</div><div>2026-05-22</div><div><span class="chip amber">In progress</span></div>
+          <div>Elena</div><div>SteerCo #25</div><div>2026-05-22</div><div><span class="chip amber">In progress</span></div>
         </div>
         <div class="action-row">
           <div class="id-tag">A-104</div>
           <div>SI SOW V3 amendment review and CFO signature</div>
-          <div>Tom Chartrand</div><div>SteerCo #25</div><div>2026-05-08</div><div><span class="chip red">At risk</span></div>
+          <div>Dana Whitfield</div><div>SteerCo #25</div><div>2026-05-08</div><div><span class="chip red">At risk</span></div>
         </div>
         <div class="action-row">
           <div class="id-tag">A-105</div>
@@ -1382,17 +1384,17 @@ details.drill .body { padding: 0 14px 14px 14px; font-size: 12px; color: var(--t
         <div class="action-row">
           <div class="id-tag">A-106</div>
           <div>UAT environment refresh permanent fix (PR-244 merge and validate)</div>
-          <div>Sasi</div><div>SteerCo #25</div><div>2026-05-12</div><div><span class="chip amber">In progress</span></div>
+          <div>Anika</div><div>SteerCo #25</div><div>2026-05-12</div><div><span class="chip amber">In progress</span></div>
         </div>
         <div class="action-row">
           <div class="id-tag">A-107</div>
           <div>Master data reconciliation: 142 SKU manual review with SCM</div>
-          <div>Pedro AG</div><div>SteerCo #25</div><div>2026-05-09</div><div><span class="chip amber">In progress</span></div>
+          <div>L. Navarro</div><div>SteerCo #25</div><div>2026-05-09</div><div><span class="chip amber">In progress</span></div>
         </div>
         <div class="action-row">
           <div class="id-tag">A-108</div>
           <div>Phase 4 sustain mode org design draft</div>
-          <div>Dan Wood</div><div>SteerCo #24</div><div>2026-05-22</div><div><span class="chip amber">In progress</span></div>
+          <div>Dan Harmon</div><div>SteerCo #24</div><div>2026-05-22</div><div><span class="chip amber">In progress</span></div>
         </div>
         <div class="action-row">
           <div class="id-tag">A-109</div>
@@ -1407,12 +1409,12 @@ details.drill .body { padding: 0 14px 14px 14px; font-size: 12px; color: var(--t
         <div class="action-row">
           <div class="id-tag">A-097</div>
           <div>WS7 stabilization 60 day report</div>
-          <div>Sasi</div><div>SteerCo #23</div><div>2026-04-22</div><div><span class="chip green">Closed</span></div>
+          <div>Anika</div><div>SteerCo #23</div><div>2026-04-22</div><div><span class="chip green">Closed</span></div>
         </div>
         <div class="action-row">
           <div class="id-tag">A-095</div>
           <div>Phase 3 incentive payout schedule for outcomes met</div>
-          <div>Brianna</div><div>SteerCo #23</div><div>2026-04-19</div><div><span class="chip green">Closed</span></div>
+          <div>Elena</div><div>SteerCo #23</div><div>2026-04-19</div><div><span class="chip green">Closed</span></div>
         </div>
       </div>
     </div>
@@ -1494,18 +1496,18 @@ details.drill .body { padding: 0 14px 14px 14px; font-size: 12px; color: var(--t
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script>
 // Common chart styling — match Spyglass control tower aesthetic
-Chart.defaults.color = '#C4B59A';
+Chart.defaults.color = '#A9AEB5';
 Chart.defaults.font.family = "'Helvetica Neue', Arial, sans-serif";
 Chart.defaults.font.size = 11;
-Chart.defaults.borderColor = 'rgba(123,91,58,0.25)';
+Chart.defaults.borderColor = 'rgba(83,89,98,0.25)';
 
 const palette = {
   gold: '#D4A853',
   goldLt: '#F4C870',
-  cream: '#FAF5EC',
+  cream: '#FAF6EC',
   good: '#8FB98B',
   goodStrong: '#3E7142',
-  warn: '#E38B55',
+  warn: '#DCBA5C',
   warnStrong: '#B8860B',
   bad: '#D94A2B',
   info: '#50808E',
@@ -1515,8 +1517,8 @@ const palette = {
 
 function gridOpts() {
   return {
-    grid: { color: 'rgba(123,91,58,0.18)', drawBorder: false },
-    ticks: { color: '#8A7856' },
+    grid: { color: 'rgba(83,89,98,0.18)', drawBorder: false },
+    ticks: { color: '#676F79' },
   };
 }
 
@@ -1588,8 +1590,8 @@ new Chart(document.getElementById('chartCostMix'), {
     labels: ['SI Labor (SI Partner)','Planning Platform','Internal labor','Oracle Agent Studio','OCI compute / tokens','Other vendors','Contingency'],
     datasets: [{
       data: [2184, 1868, 410, 98, 220, 419, 220],
-      backgroundColor: [palette.gold, palette.info, palette.goodStrong, palette.d4, palette.warn, palette.d7, '#8A7856'],
-      borderColor: '#3A2210', borderWidth: 2,
+      backgroundColor: [palette.gold, palette.info, palette.goodStrong, palette.d4, palette.warn, palette.d7, '#676F79'],
+      borderColor: '#3A2F10', borderWidth: 2,
     }],
   },
   options: {

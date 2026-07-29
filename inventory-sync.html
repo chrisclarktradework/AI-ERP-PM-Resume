@@ -20,11 +20,11 @@
 
 :root {
   /* Brand chrome - dark, for header and nav only */
-  --chrome-deep: #1F1408;
-  --chrome-panel: #2D1F12;
-  --chrome-surface: #3A2A18;
-  --chrome-border: #4A3522;
-  --chrome-border-md: #6B4F32;
+  --chrome-deep: #1F1908;
+  --chrome-panel: #1D1F22;
+  --chrome-surface: #26282C;
+  --chrome-border: #32353A;
+  --chrome-border-md: #484D55;
 
   /* Work surfaces - cream, for content */
   --work-bg: #F2EBD9;
@@ -32,24 +32,24 @@
   --work-surface: #FFFDF5;
   --work-border: #D8C89E;
   --work-border-dk: #B89E6A;
-  --work-text: #3A2A15;
-  --work-text-muted: #6B5636;
-  --work-text-dim: #8F7A55;
+  --work-text: #24272B;
+  --work-text-muted: #4A4F57;
+  --work-text-dim: #69707B;
   --chrome-text: #F2E8D4;
-  --chrome-text-muted: #A89576;
+  --chrome-text-muted: #868E98;
 
   /* Brand accent - brand only, never status */
-  --brand-gold: #C8A060;
+  --brand-gold: #8B939D;
   --brand-gold-bright: #D4A853;
   --brand-cream: #E6D9B8;
 
   /* Status - strict three */
   --s-good: #3E7142;
   --s-good-bg: #E3EED3;
-  --s-warn: #9E5E0F;
+  --s-warn: #8F711E;
   --s-warn-bg: #F7EBC8;
   --s-bad: #B04528;
-  --s-bad-bg: #F6D8CB;
+  --s-bad-bg: #F4EACD;
 
   /* AI accent - purple */
   --ai: #6A4B95;
@@ -91,7 +91,7 @@ header.topbar {
   gap: 18px;
   align-items: center;
   padding: 10px 22px;
-  background: linear-gradient(180deg, #3A281A 0%, var(--chrome-panel) 100%);
+  background: linear-gradient(180deg, #27292D 0%, var(--chrome-panel) 100%);
   border-bottom: 2px solid var(--brand-gold);
   color: var(--chrome-text);
 }
@@ -99,12 +99,12 @@ header.topbar {
 .brand .name { font-family: Georgia, serif; font-size: 22px; color: var(--chrome-text); letter-spacing: 0.15em; }
 .brand .tag { font-size: 9px; color: var(--brand-gold); letter-spacing: 0.3em; margin-top: 2px; }
 .title-block .title { font-family: Georgia, serif; font-size: 16px; color: var(--brand-gold-bright); letter-spacing: 0.16em; }
-.title-block .sub { font-size: 11px; color: #A8906A; letter-spacing: 0.12em; margin-top: 3px; }
+.title-block .sub { font-size: 11px; color: #808792; letter-spacing: 0.12em; margin-top: 3px; }
 .diamond { color: var(--brand-gold); font-size: 10px; margin-right: 6px; }
 
 .env-pill { padding: 4px 10px; border-radius: 2px; font-size: 10px; letter-spacing: 0.18em; font-weight: 700; background: var(--s-good); color: #F5F1E0; }
 
-/* UPDATED role chip leads with scope (DeWitt Shift A) per end user feedback */
+/* UPDATED role chip leads with scope (Batavia Shift A) per end user feedback */
 .role-chip { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; padding: 4px 14px; border-left: 1px solid var(--chrome-border-md); }
 .role-chip .scope { font-family: Georgia, serif; font-size: 12px; color: var(--brand-gold-bright); letter-spacing: 0.15em; }
 .role-chip .me { font-size: 11px; color: var(--chrome-text); }
@@ -130,7 +130,7 @@ header.topbar {
   border-bottom: 1px solid var(--chrome-border);
   font-size: 11px;
   letter-spacing: 0.06em;
-  color: #A8906A;
+  color: #808792;
   align-items: center;
 }
 .status-strip .stat { display: flex; align-items: center; gap: 7px; }
@@ -148,16 +148,16 @@ header.topbar {
 
 /* Plant-by-plant mini strip */
 .plant-strip { display: flex; align-items: center; gap: 12px; padding: 0 16px; border-left: 1px solid var(--chrome-border); border-right: 1px solid var(--chrome-border); }
-.plant-strip .plabel { font-size: 9px; letter-spacing: 0.2em; color: #8A7856; }
+.plant-strip .plabel { font-size: 9px; letter-spacing: 0.2em; color: #676F79; }
 .plant-dot { display: flex; flex-direction: column; align-items: center; gap: 2px; }
-.plant-dot .pd-name { font-size: 9px; color: #8A7856; letter-spacing: 0.12em; }
+.plant-dot .pd-name { font-size: 9px; color: #676F79; letter-spacing: 0.12em; }
 .plant-dot .pd-circle { width: 14px; height: 14px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 8px; font-weight: 700; color: rgba(0,0,0,0.5); }
 .plant-dot .pd-circle.good { background: #8FAA6A; }
 .plant-dot .pd-circle.warn { background: var(--s-warn); color: #F5F1E0; }
 .plant-dot .pd-circle.bad { background: var(--s-bad); color: #F5F1E0; animation: dotPulse 1.6s infinite; }
 @keyframes dotPulse { 0%,100% { opacity: 1; } 50% { opacity: 0.6; } }
 
-.status-strip .shortcuts { display: flex; gap: 10px; align-items: center; color: #8A7856; font-size: 10px; letter-spacing: 0.12em; }
+.status-strip .shortcuts { display: flex; gap: 10px; align-items: center; color: #676F79; font-size: 10px; letter-spacing: 0.12em; }
 .status-strip .shortcuts .k { display: inline-block; padding: 1px 6px; background: var(--chrome-surface); border: 1px solid var(--chrome-border); border-radius: 2px; font-family: "SF Mono", monospace; color: var(--chrome-text); margin-right: 4px; }
 .status-strip .runbook { color: var(--brand-gold); font-size: 11px; letter-spacing: 0.1em; }
 
@@ -173,7 +173,7 @@ nav.tabs {
 }
 nav.tabs label {
   background: transparent;
-  color: #A8906A;
+  color: #808792;
   padding: 13px 22px;
   font-size: 12px;
   letter-spacing: 0.16em;
@@ -334,7 +334,7 @@ details.anomaly-item {
   margin-bottom: 8px;
   transition: border-color 0.15s;
 }
-details.anomaly-item[open] { border-left-color: var(--ai); background: var(--work-surface); box-shadow: 0 2px 8px rgba(58,42,21,0.08); }
+details.anomaly-item[open] { border-left-color: var(--ai); background: var(--work-surface); box-shadow: 0 2px 8px rgba(36,39,43,0.08); }
 details.anomaly-item.crit { border-left-color: var(--s-bad); }
 details.anomaly-item.high { border-left-color: var(--s-warn); }
 details.anomaly-item.med { border-left-color: var(--brand-gold); }
@@ -504,7 +504,7 @@ details.kebab > summary {
 details.kebab > summary::-webkit-details-marker { display: none; }
 details.kebab > summary::after { content: '\22EE'; letter-spacing: 2px; }
 details.kebab[open] > summary { background: var(--work-panel); border-color: var(--ai); color: var(--ai); }
-.kebab-menu { position: absolute; right: 0; top: calc(100% + 4px); background: var(--work-surface); border: 1px solid var(--work-border-dk); border-radius: 3px; box-shadow: 0 4px 14px rgba(58,42,21,0.15); min-width: 220px; padding: 4px 0; z-index: 10; }
+.kebab-menu { position: absolute; right: 0; top: calc(100% + 4px); background: var(--work-surface); border: 1px solid var(--work-border-dk); border-radius: 3px; box-shadow: 0 4px 14px rgba(36,39,43,0.15); min-width: 220px; padding: 4px 0; z-index: 10; }
 .kebab-menu .kbi { display: block; padding: 10px 14px; font-size: 12px; color: var(--work-text); letter-spacing: 0.1em; cursor: pointer; user-select: none; }
 .kebab-menu .kbi:hover { background: var(--work-panel); color: var(--ai); }
 .kebab-menu .kbi.danger:hover { background: var(--s-bad-bg); color: var(--s-bad); }
@@ -658,8 +658,8 @@ table.data td.mono { font-family: "SF Mono", Menlo, Consolas, monospace; font-si
 .hm-label { font-size: 10px; color: var(--work-text-muted); letter-spacing: 0.1em; display: flex; align-items: center; padding-right: 8px; font-weight: 600; }
 .hm-cell.h0 { background: rgba(62,113,66,0.18); color: var(--s-good); }
 .hm-cell.h1 { background: rgba(62,113,66,0.35); color: var(--s-good); }
-.hm-cell.h2 { background: rgba(200,160,96,0.40); }
-.hm-cell.h3 { background: rgba(158,94,15,0.50); color: var(--work-text); }
+.hm-cell.h2 { background: rgba(139,147,157,0.40); }
+.hm-cell.h3 { background: rgba(143,113,30,0.50); color: var(--work-text); }
 .hm-cell.h4 { background: rgba(176,69,40,0.60); color: #FFFDF5; }
 .hm-cell.h5 { background: var(--s-bad); color: #FFFDF5; font-weight: 700; }
 
@@ -726,7 +726,7 @@ table.data td.mono { font-family: "SF Mono", Menlo, Consolas, monospace; font-si
 /* ===================================================================
    HELP OVERLAY
    =================================================================== */
-.help-overlay { position: fixed; inset: 0; background: rgba(45,32,21,0.85); z-index: 100; display: none; align-items: center; justify-content: center; padding: 30px; }
+.help-overlay { position: fixed; inset: 0; background: rgba(30,33,36,0.85); z-index: 100; display: none; align-items: center; justify-content: center; padding: 30px; }
 #h-show:checked ~ .help-overlay { display: flex; }
 .help-panel { background: var(--work-panel); border: 1px solid var(--work-border-dk); border-radius: 8px; max-width: 720px; width: 100%; padding: 28px 32px; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
 .help-title { font-family: Georgia, serif; font-size: 20px; color: var(--work-text); letter-spacing: 0.08em; margin-bottom: 4px; }
@@ -750,12 +750,12 @@ footer.live-feed {
   bottom: 0; left: 0; right: 0;
   overflow: hidden;
   font-size: 11px;
-  color: #A8906A;
+  color: #808792;
   z-index: 50;
 }
 .live-badge { background: var(--s-bad); color: #FFFDF5; padding: 4px 10px; border-radius: 2px; font-size: 10px; letter-spacing: 0.15em; font-weight: 700; flex-shrink: 0; animation: ticker-pulse 2s infinite; }
 @keyframes ticker-pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.6; } }
-.ticker { color: #A8906A; letter-spacing: 0.06em; white-space: nowrap; overflow: hidden; }
+.ticker { color: #808792; letter-spacing: 0.06em; white-space: nowrap; overflow: hidden; }
 .ticker .ts { color: var(--brand-gold); margin-right: 8px; }
 .ticker .tag { color: #7FA4B8; margin-right: 6px; }
 
@@ -775,6 +775,14 @@ footer.live-feed {
 .version-tag strong { color: var(--brand-gold); }
 
 </style>
+
+<style id="cio-theme2">:root{
+--chrome-deep:#0A2540;--chrome-panel:#0E2C49;--chrome-surface:#123A5C;--chrome-border:rgba(231,207,142,.18);--chrome-border-md:rgba(231,207,142,.30);--chrome-text:#F4F7FA;--chrome-text-muted:#C7D3DF;
+--work-bg:#0A2540;--work-panel:#0E2C49;--work-surface:#123A5C;--work-border:rgba(231,207,142,.16);--work-border-dk:rgba(231,207,142,.26);--work-text:#F4F7FA;--work-text-muted:#C7D3DF;--work-text-dim:#9FB1C2;
+--brand-gold:#A9832C;--brand-gold-bright:#C8A24B;--brand-cream:#E7CF8E;
+--bg-deep:#0A2540;--bg-panel:#0E2C49;--bg-surface:#123A5C;--bg-surface-lt:#17436A;--border:rgba(231,207,142,.16);--border-lt:rgba(231,207,142,.26);--text:#F4F7FA;--text-muted:#C7D3DF;--text-dim:#9FB1C2;--accent-gold:#A9832C;--accent-gold-bright:#C8A24B;--accent-cream:#E7CF8E;
+--ai:#7FA8D9;--ai-bg:rgba(127,168,217,.14);--ai-soft:rgba(127,168,217,.22)}
+body{background:#0A2540}</style>
 </head>
 <body>
 
@@ -814,7 +822,7 @@ footer.live-feed {
   <span class="env-pill">PROD</span>
   <!-- Role chip leads with SCOPE then name (end user feedback) -->
   <div class="role-chip">
-    <div class="scope">DEWITT SHIFT A</div>
+    <div class="scope">BATAVIA SHIFT A</div>
     <div class="me">Operator</div>
     <div class="role-meta">OPERATOR &middot; DSW OWNERSHIP</div>
   </div>
@@ -854,7 +862,7 @@ footer.live-feed {
   <!-- Plant-by-plant dots per manager feedback -->
   <div class="plant-strip">
     <span class="plabel">PLANTS</span>
-    <div class="plant-dot" title="DeWitt - 2 open"><div class="pd-circle warn">2</div><div class="pd-name">DW</div></div>
+    <div class="plant-dot" title="Batavia - 2 open"><div class="pd-circle warn">2</div><div class="pd-name">DW</div></div>
     <div class="plant-dot" title="Cortlandville - 1 open"><div class="pd-circle good">0</div><div class="pd-name">CV</div></div>
     <div class="plant-dot" title="BCV - 3 open"><div class="pd-circle warn">3</div><div class="pd-name">BCV</div></div>
     <div class="plant-dot" title="DSW - 7 open, 1 critical"><div class="pd-circle bad">7</div><div class="pd-name">DSW</div></div>
@@ -1534,37 +1542,37 @@ footer.live-feed {
           <line x1="36" y1="158" x2="790" y2="158" stroke="#D8C89E" stroke-width="1"/>
           <!-- target line at 99.5% -->
           <line x1="36" y1="18" x2="790" y2="18" stroke="#B89E6A" stroke-dasharray="4 4" stroke-width="1"/>
-          <text x="42" y="14" fill="#8F7A55" font-size="9" font-family="Georgia, serif">99.5% TARGET</text>
+          <text x="42" y="14" fill="#69707B" font-size="9" font-family="Georgia, serif">99.5% TARGET</text>
           <!-- y labels -->
-          <text x="30" y="22" fill="#8F7A55" font-size="9" font-family="Georgia, serif" text-anchor="end">100</text>
-          <text x="30" y="72" fill="#8F7A55" font-size="9" font-family="Georgia, serif" text-anchor="end">95</text>
-          <text x="30" y="122" fill="#8F7A55" font-size="9" font-family="Georgia, serif" text-anchor="end">90</text>
-          <text x="30" y="162" fill="#8F7A55" font-size="9" font-family="Georgia, serif" text-anchor="end">85</text>
+          <text x="30" y="22" fill="#69707B" font-size="9" font-family="Georgia, serif" text-anchor="end">100</text>
+          <text x="30" y="72" fill="#69707B" font-size="9" font-family="Georgia, serif" text-anchor="end">95</text>
+          <text x="30" y="122" fill="#69707B" font-size="9" font-family="Georgia, serif" text-anchor="end">90</text>
+          <text x="30" y="162" fill="#69707B" font-size="9" font-family="Georgia, serif" text-anchor="end">85</text>
           <!-- 2024 line -->
-          <polyline fill="none" stroke="#9E5E0F" stroke-width="2" points="60,130 120,125 180,126 240,128 300,122 360,120 420,118 480,116 540,114 600,112 660,110 720,108"/>
+          <polyline fill="none" stroke="#8F711E" stroke-width="2" points="60,130 120,125 180,126 240,128 300,122 360,120 420,118 480,116 540,114 600,112 660,110 720,108"/>
           <!-- 2025 line -->
-          <polyline fill="none" stroke="#C8A060" stroke-width="2.5" points="60,100 120,98 180,96 240,94 300,90 360,88 420,85 480,82 540,80 600,76 660,72 720,68"/>
+          <polyline fill="none" stroke="#8B939D" stroke-width="2.5" points="60,100 120,98 180,96 240,94 300,90 360,88 420,85 480,82 540,80 600,76 660,72 720,68"/>
           <!-- 2026 line -->
           <polyline fill="none" stroke="#6A4B95" stroke-width="3" points="60,50 120,45 180,38 240,34"/>
           <circle cx="240" cy="34" r="4" fill="#6A4B95" stroke="#fff" stroke-width="2"/>
           <!-- x labels -->
-          <text x="60" y="172" fill="#8F7A55" font-size="9" text-anchor="middle" font-family="Georgia, serif">JAN</text>
-          <text x="120" y="172" fill="#8F7A55" font-size="9" text-anchor="middle" font-family="Georgia, serif">FEB</text>
-          <text x="180" y="172" fill="#8F7A55" font-size="9" text-anchor="middle" font-family="Georgia, serif">MAR</text>
-          <text x="240" y="172" fill="#8F7A55" font-size="9" text-anchor="middle" font-family="Georgia, serif">APR</text>
-          <text x="300" y="172" fill="#8F7A55" font-size="9" text-anchor="middle" font-family="Georgia, serif">MAY</text>
-          <text x="360" y="172" fill="#8F7A55" font-size="9" text-anchor="middle" font-family="Georgia, serif">JUN</text>
-          <text x="420" y="172" fill="#8F7A55" font-size="9" text-anchor="middle" font-family="Georgia, serif">JUL</text>
-          <text x="480" y="172" fill="#8F7A55" font-size="9" text-anchor="middle" font-family="Georgia, serif">AUG</text>
-          <text x="540" y="172" fill="#8F7A55" font-size="9" text-anchor="middle" font-family="Georgia, serif">SEP</text>
-          <text x="600" y="172" fill="#8F7A55" font-size="9" text-anchor="middle" font-family="Georgia, serif">OCT</text>
-          <text x="660" y="172" fill="#8F7A55" font-size="9" text-anchor="middle" font-family="Georgia, serif">NOV</text>
-          <text x="720" y="172" fill="#8F7A55" font-size="9" text-anchor="middle" font-family="Georgia, serif">DEC</text>
+          <text x="60" y="172" fill="#69707B" font-size="9" text-anchor="middle" font-family="Georgia, serif">JAN</text>
+          <text x="120" y="172" fill="#69707B" font-size="9" text-anchor="middle" font-family="Georgia, serif">FEB</text>
+          <text x="180" y="172" fill="#69707B" font-size="9" text-anchor="middle" font-family="Georgia, serif">MAR</text>
+          <text x="240" y="172" fill="#69707B" font-size="9" text-anchor="middle" font-family="Georgia, serif">APR</text>
+          <text x="300" y="172" fill="#69707B" font-size="9" text-anchor="middle" font-family="Georgia, serif">MAY</text>
+          <text x="360" y="172" fill="#69707B" font-size="9" text-anchor="middle" font-family="Georgia, serif">JUN</text>
+          <text x="420" y="172" fill="#69707B" font-size="9" text-anchor="middle" font-family="Georgia, serif">JUL</text>
+          <text x="480" y="172" fill="#69707B" font-size="9" text-anchor="middle" font-family="Georgia, serif">AUG</text>
+          <text x="540" y="172" fill="#69707B" font-size="9" text-anchor="middle" font-family="Georgia, serif">SEP</text>
+          <text x="600" y="172" fill="#69707B" font-size="9" text-anchor="middle" font-family="Georgia, serif">OCT</text>
+          <text x="660" y="172" fill="#69707B" font-size="9" text-anchor="middle" font-family="Georgia, serif">NOV</text>
+          <text x="720" y="172" fill="#69707B" font-size="9" text-anchor="middle" font-family="Georgia, serif">DEC</text>
           <!-- legend -->
-          <rect x="600" y="14" width="12" height="3" fill="#9E5E0F"/>
-          <text x="616" y="18" font-size="10" fill="#8F7A55" font-family="Georgia, serif">2024 avg 87.4%</text>
-          <rect x="600" y="28" width="12" height="3" fill="#C8A060"/>
-          <text x="616" y="32" font-size="10" fill="#8F7A55" font-family="Georgia, serif">2025 avg 91.2%</text>
+          <rect x="600" y="14" width="12" height="3" fill="#8F711E"/>
+          <text x="616" y="18" font-size="10" fill="#69707B" font-family="Georgia, serif">2024 avg 87.4%</text>
+          <rect x="600" y="28" width="12" height="3" fill="#8B939D"/>
+          <text x="616" y="32" font-size="10" fill="#69707B" font-family="Georgia, serif">2025 avg 91.2%</text>
           <rect x="600" y="42" width="12" height="3" fill="#6A4B95"/>
           <text x="616" y="46" font-size="10" fill="#6A4B95" font-family="Georgia, serif" font-weight="bold">2026 YTD 95.3%</text>
         </svg>
@@ -1633,14 +1641,14 @@ footer.live-feed {
           <text x="300" y="108" fill="#6A4B95" font-size="10" text-anchor="middle">AI v2.3.1</text>
           <text x="300" y="130" fill="#6A4B95" font-size="10" text-anchor="middle">12,820 checks/hr</text>
 
-          <rect x="460" y="40" width="130" height="100" rx="5" fill="#F6EED4" stroke="#C8A060" stroke-width="2"/>
+          <rect x="460" y="40" width="130" height="100" rx="5" fill="#F6EED4" stroke="#8B939D" stroke-width="2"/>
           <text x="525" y="90" fill="#886717" font-family="Georgia, serif" font-size="13" text-anchor="middle">ORACLE</text>
           <text x="525" y="110" fill="#886717" font-family="Georgia, serif" font-size="13" text-anchor="middle">WMS</text>
           <text x="525" y="128" fill="#886717" font-size="10" text-anchor="middle">8,460 events/hr</text>
 
-          <line x1="140" y1="90" x2="225" y2="90" stroke="#6B5636" stroke-width="2" marker-end="url(#arr)"/>
-          <line x1="375" y1="90" x2="455" y2="90" stroke="#6B5636" stroke-width="2" marker-end="url(#arr)"/>
-          <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6B5636"/></marker></defs>
+          <line x1="140" y1="90" x2="225" y2="90" stroke="#4A4F57" stroke-width="2" marker-end="url(#arr)"/>
+          <line x1="375" y1="90" x2="455" y2="90" stroke="#4A4F57" stroke-width="2" marker-end="url(#arr)"/>
+          <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4A4F57"/></marker></defs>
         </svg>
       </div>
       <div class="panel">
